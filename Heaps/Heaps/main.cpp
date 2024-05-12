@@ -30,11 +30,28 @@ private:
         heap[index1] = heap[index2];
         heap[index2] = temp;
     }
+public:
+    void insert(int value){
+        heap.push_back(value);
+        int current = int(heap.size()) - 1;
+        while (current > 0 && heap[current] > heap[parent(current)]) {
+            swap(current, parent(current));
+            current = parent(current);
+        }
+    }
+    
+    void printHeap(){
+        
+    }
     
 };
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+    Heap* myheap = new Heap();
+    myheap->insert(40);
+    myheap->insert(38);
+    myheap->insert(39);
+    myheap->insert(41);
+    
+    myheap->pri
 }
