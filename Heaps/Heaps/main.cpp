@@ -95,12 +95,14 @@ int main(int argc, const char * argv[]) {
     myheap->insert(38);
     myheap->insert(39);
     myheap->insert(41);
-    
-    myheap->printHeap();
-    
     myheap->insert(100);
+    myheap->insert(103);
+    
     myheap->printHeap();
     
-    myheap->insert(103);
+    myheap->remove();
+    myheap->printHeap();
+    
+    myheap->remove();
     myheap->printHeap();
 }
