@@ -60,5 +60,11 @@ int main(int argc, const char * argv[]) {
     myheap->insert(39);
     myheap->insert(41);
     
-    myheap->pri
+    myheap->printHeap();
+    
+    myheap->insert(100);
+    myheap->printHeap();
+    
+    myheap->insert(103);
+    myheap->printHeap();
 }
