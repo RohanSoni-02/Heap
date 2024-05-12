@@ -51,6 +51,21 @@ public:
         cout<<"]"<<endl;
     }
     
+    int remove(){
+        if (heap.empty()) {
+            return INT_MIN;
+        }
+        int maxValue = heap.front();
+        if (heap.size()==1) {
+            heap.pop_back();
+        }
+        else{
+            heap[0]= heap.back();
+            heap.pop_back();
+            sinkDown(0);
+        }
+        return maxValue;
+    }
 };
 
 int main(int argc, const char * argv[]) {
