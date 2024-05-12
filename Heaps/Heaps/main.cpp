@@ -66,6 +66,27 @@ public:
         }
         return maxValue;
     }
+    
+    void sinkDown(int index){
+        int maxIndex = index;
+        while (true) {
+            int leftIndex = leftChild(index);
+            int rightIndex = rightChild(index);
+            if (leftIndex<heap.size() && heap[leftIndex] > heap[maxIndex]) {
+                maxIndex = leftIndex;
+            }
+            if (rightIndex<heap.size() && heap[rightIndex] > heap[maxIndex]) {
+                maxIndex = rightIndex;
+            }
+            if (maxIndex != index) {
+                swap(index, maxIndex);
+                index = maxIndex;
+            }
+            else{
+                return;
+            }
+        }
+    }
 };
 
 int main(int argc, const char * argv[]) {
