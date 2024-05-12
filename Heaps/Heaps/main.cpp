@@ -41,7 +41,14 @@ public:
     }
     
     void printHeap(){
-        
+        cout<<"\n [";
+        for (size_t i=0; i<heap.size(); i++) {
+            cout<<heap[i];
+            if (i < heap.size()-1) {
+                cout<<", ";
+            }
+        }
+        cout<<"]"<<endl;
     }
     
 };
